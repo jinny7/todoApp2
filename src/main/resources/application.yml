@@ -10,12 +10,13 @@ spring:
 #      mode: always
 #      schema-locations: classpath:schema.sql
 
-jpa:
-  show-sql: true
-  hibernate:
-    ddl-auto: create
-  properties:
-    hibernate.dialect: org.hibernate.dialect.MySQLDialect
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        show-sql: true
 
 output:
   ansi:
