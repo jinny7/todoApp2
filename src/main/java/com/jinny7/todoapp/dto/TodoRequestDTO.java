@@ -1,6 +1,6 @@
-package com.jinny7.todoapp.controller;
+package com.jinny7.todoapp.dto;
 
-import com.jinny7.todoapp.repository.Todo;
+import com.jinny7.todoapp.entity.Todo;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,14 +10,14 @@ public class TodoRequestDTO {
     private String title;
     private String content;
     private String userName;
-    private String password; // 비밀번호 필드 추가
+    private String password;
 
     public Todo toEntity() {
         return Todo.builder()
                 .title(title)
                 .content(content)
                 .userName(userName)
-                .password(password) // 비밀번호 설정
+                .password(password)
                 .build();
     }
 }

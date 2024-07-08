@@ -1,8 +1,7 @@
 package com.jinny7.todoapp.service;
 
-import com.jinny7.todoapp.controller.TodoRequestDTO;
-import com.jinny7.todoapp.controller.TodoResponseDTO;
-import com.jinny7.todoapp.repository.Todo;
+import com.jinny7.todoapp.dto.TodoRequestDTO;
+import com.jinny7.todoapp.entity.Todo;
 import com.jinny7.todoapp.repository.TodoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Sort;
@@ -50,7 +49,7 @@ public class TodoService {
         Todo todo = getTodo(todoId);
         // 비밀번호 체크
         if (todo.getPassword() != null && !todo.getPassword().equals(password)) {
-            throw new IllegalArgumentException("Invalid password");
+            throw new IllegalArgumentException("비밀번호가 틀렸습니다.");
         }
         return todo;
     }

@@ -1,6 +1,6 @@
-package com.jinny7.todoapp.controller;
+package com.jinny7.todoapp.dto;
 
-import com.jinny7.todoapp.repository.Todo;
+import com.jinny7.todoapp.entity.Todo;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
